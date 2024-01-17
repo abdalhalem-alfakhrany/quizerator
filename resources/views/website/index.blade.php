@@ -6,10 +6,10 @@
     <a href="{{ route('register', []) }}">
         <h1>register</h1>
     </a>
-    <a href="{{ route('logout', []) }}">
-        <h1>logout</h1>
-    </a>
+
     @auth
-        you are {{ auth()->user()->role }}
+        <a href="{{ route('logout', []) }}">
+            <h1>logout</h1>
+        </a>
     @endauth
 @endsection

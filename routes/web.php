@@ -14,21 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('login')->group(function () {
-    Route::post('/', [AuthController::class, 'login'])->name('login');
-    Route::view('/', 'auth.login')->name('login');
-});
+// Route::prefix('login')->group(function () {
+//     Route::post('/', [AuthController::class, 'login'])->name('login');
+//     Route::view('/', 'auth.login')->name('login');
+// });
 
-Route::prefix('register')->group(function () {
-    Route::post('/', [AuthController::class, 'register'])->name('register');
-    Route::view('/', 'auth.register')->name('register');
-});
+// Route::prefix('register')->group(function () {
+//     Route::post('/', [AuthController::class, 'register'])->name('register');
+//     Route::view('/', 'auth.register')->name('register');
+// });
 
-Route::get('logout/', [AuthController::class, 'logout'])->name('logout');
+// Route::get('logout/', [AuthController::class, 'logout'])->name('logout');
 
 
 Route::view('website', 'website.index')->name('website.index');
-Route::view('admin', 'dash-board.index')->name('admin.index');
+Route::view('admin', 'dashboard.index')->name('admin.index');
 
 Route::get('/', function () {
     return redirect(route('website.index'));

@@ -9,8 +9,10 @@
     <title>Quizerator</title>
 </head>
 
-<body>
-    @yield('content')
+<body class="bg-light">
+    <div class="container">
+        @yield('content')
+    </div>
 </body>
 
 </html>
