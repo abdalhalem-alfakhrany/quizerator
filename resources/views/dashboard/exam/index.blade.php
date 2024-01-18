@@ -20,7 +20,7 @@
             <tbody>
                 @foreach ($exams as $exam)
                     <tr>
-                        <th scope="row">{{ $loop->index }}</th>
+                        <td scope="row">{{ $loop->index }}</th>
                         <td>{{ $exam->title }}</td>
                         <td>{{ $exam->start_date }}</td>
                         <td>{{ $exam->end_date }}</td>

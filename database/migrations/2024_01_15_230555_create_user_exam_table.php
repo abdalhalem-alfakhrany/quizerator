@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('user_exam', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('exam_id')->constrained();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('exam_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedInteger('result');
+            $table->dateTime('start_attendance');
+            $table->dateTime('end_attendance');
             $table->timestamps();
         });
     }
